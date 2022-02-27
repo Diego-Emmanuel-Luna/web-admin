@@ -15,61 +15,8 @@ import CopyrightIcon from '@mui/icons-material/CopyrightOutlined';
 
 import Logo from '../../assets/img/GLI_Logo.png'
 import ExternalLink from '../../assets/icons/externalLink';
-import AdministratorIcon from '../../assets/icons/administrators';
 
-// esto va a ir al home
-const menuOptions = [
-    {
-        key: 'administrators',
-        title: 'Administradores',
-        icon: <AdministratorIcon />
-    },
-    {
-        key: 'catalogs',
-        title: 'Catalogos',
-        icon: <AdministratorIcon />
-    },
-    {
-        key: 'leaders',
-        title: 'Líderes',
-        icon: <AdministratorIcon />
-    },
-    {
-        key: 'users',
-        title: 'Usuarios',
-        icon: <AdministratorIcon />
-    },
-    {
-        key: 'company',
-        title: 'Mi empresa',
-        icon: <AdministratorIcon color='secondary' />
-    },
-    {
-        key: 'courses',
-        title: 'Cursos',
-        icon: <AdministratorIcon color='secondary' />
-    },
-    {
-        key: 'rewards',
-        title: 'Recompensas',
-        icon: <AdministratorIcon color='secondary' />
-    },
-    {
-        key: 'events',
-        title: 'Eventos',
-        icon: <AdministratorIcon color='secondary' />
-    },
-    {
-        key: 'notifications',
-        title: 'Notificaciones',
-        icon: <AdministratorIcon color='secondary' />
-    },
-    {
-        key: 'reports',
-        title: 'Reportes',
-        icon: <AdministratorIcon color='secondary' />
-    }
-]
+
 
 const drawerWidth = '267px';
 
@@ -182,7 +129,7 @@ const useStyles = makeStyles(theme => (
     }));
 
 
-export default function PermanentDrawerLeft() {
+export default function PermanentDrawerLeft({menuOptions = [], setSection}) {
     const classes = useStyles();
     const Help = () => {
         return (
@@ -224,7 +171,7 @@ export default function PermanentDrawerLeft() {
                 menuOptions.map((option, index) => {
                     return (
                         <List className={classes.listItem} key={option.key}>
-                            <ListItem className={classes.listItem} button key={option.key}>
+                            <ListItem className={classes.listItem} button key={option.key} onClick={()=>{setSection(option)}}>
                                 <ListItemIcon className={classes.listItemIcon}>
                                     {option.icon}
                                 </ListItemIcon>
