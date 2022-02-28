@@ -9,7 +9,18 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Drawer from '../../Components/Drawer'
 import NavBar from '../../Components/NavBar'
 import Content from '../../Components/Content'
+import UsersIcon from '../../assets/icons/users'
+import EventsIcon from '../../assets/icons/events'
+import LeadersIcon from '../../assets/icons/leaders'
+import RewardsIcon from '../../assets/icons/rewards'
+import ReportsIcon from '../../assets/icons/reports'
+import CompanyIcon from '../../assets/icons/company'
+import CoursesIcon from '../../assets/icons/courses'
+import CatalogsIcon from '../../assets/icons/catalogs'
+import NotificationsIcon from '../../assets/icons/notifications'
 import AdministratorIcon from '../../assets/icons/administrators'
+
+
 import AdministratorHome from '../../Components/AdministratorHome'
 
 const theme = createTheme({
@@ -37,47 +48,47 @@ const menuOptions = [
     {
         key: 'catalogs',
         title: 'Catalogos',
-        icon: <AdministratorIcon />
+        icon: <CatalogsIcon />
     },
     {
         key: 'leaders',
         title: 'Líderes',
-        icon: <AdministratorIcon />
+        icon: <LeadersIcon />
     },
     {
         key: 'users',
         title: 'Usuarios',
-        icon: <AdministratorIcon />
+        icon: <UsersIcon />
     },
     {
         key: 'company',
         title: 'Mi empresa',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <CompanyIcon />
     },
     {
         key: 'courses',
         title: 'Cursos',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <CoursesIcon />
     },
     {
         key: 'rewards',
         title: 'Recompensas',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <RewardsIcon />
     },
     {
         key: 'events',
         title: 'Eventos',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <EventsIcon />
     },
     {
         key: 'notifications',
         title: 'Notificaciones',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <NotificationsIcon />
     },
     {
         key: 'reports',
         title: 'Reportes',
-        icon: <AdministratorIcon color='secondary' />
+        icon: <ReportsIcon />
     }
 ]
 

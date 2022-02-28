@@ -14,9 +14,10 @@ import Checkbox from '@mui/material/Checkbox';
 import Avatar from '@mui/material/Avatar';
 import { visuallyHidden } from '@mui/utils';
 import { Button, IconButton } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/DeleteForeverOutlined';
-import ViewIcon from '@mui/icons-material/VisibilityOutlined';
+
+import EditIcon from '../../assets/icons/edit';
+import DeleteIcon from '../../assets/icons/delete';
+import ViewIcon from '../../assets/icons/view';
 
 function createData(name, area, email, status, details) {
     return {

@@ -1,10 +1,10 @@
 import Grid from '@mui/material/Grid'
 import AppBar from '@mui/material/AppBar'
-import { Logout } from '@mui/icons-material'
 import { SearchIcon } from '../../assets/icons/search'
 import { IconButton, Divider, Tooltip, Avatar, Typography } from '@mui/material'
 
 import useStyles from './styles'
+import Logout from '../../assets/icons/logOut'
 
 export default function NavBar() {
     const classes = useStyles();
@@ -30,12 +30,12 @@ export default function NavBar() {
                     <Grid item sm={7} className={classes.userName}>
                         <Grid container >
                             <Grid item xs={12} className={classes.gridContent}>
-                                <Typography>
+                                <Typography sx={{color:'white'}}>
                                     Diego Luna
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} className={classes.gridContent}>
-                                <Typography>
+                                <Typography sx={{color:'white'}}>
                                     Desarrollador de software
                                 </Typography>
                             </Grid>
@@ -51,6 +51,5 @@ export default function NavBar() {
                 </Grid>
             </Grid>
         </AppBar>
-
     )
 }
