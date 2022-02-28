@@ -1,20 +1,16 @@
-import { useState } from 'react';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Grid, Link, Typography } from '@mui/material';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
+import { useState } from 'react'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import { Link, Typography } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
+import Breadcrumbs from '@mui/material/Breadcrumbs'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import Drawer from '../../Components/Drawer'
-import NavBar from '../../Components/NavBar';
-
-
-import AdministratorIcon from '../../assets/icons/administrators';
-import Content from '../../Components/Content';
-import AdministratorHome from '../../Components/AdministratorHome';
-
-
+import NavBar from '../../Components/NavBar'
+import Content from '../../Components/Content'
+import AdministratorIcon from '../../assets/icons/administrators'
+import AdministratorHome from '../../Components/AdministratorHome'
 
 const theme = createTheme({
     palette: {
@@ -34,7 +30,7 @@ const menuOptions = [
     {
         key: 'administrators',
         title: 'Administradores',
-        homeTitle:'Administradores de la consola',
+        homeTitle: 'Administradores de la consola',
         icon: <AdministratorIcon />,
         component: <AdministratorHome />
     },
@@ -86,26 +82,24 @@ const menuOptions = [
 ]
 
 
-export default function Administrators() {
+export default function Home() {
 
     const [section, setSection] = useState(null)
 
     const breadcrumbs = [
-        <Link underline="hover" key="home" color="tertiary" sx={{ cursor: 'pointer' }} onClick={() => { setSection(null) }} >
+        <Link
+            underline="hover"
+            key="home"
+            color="tertiary"
+            sx={{ cursor: 'pointer' }}
+            onClick={() => { setSection(null) }}
+        >
             Inicio
         </Link>,
         <Typography key="section" color='secondary'>
             {section?.title}
         </Typography>,
     ];
-
-    const addBreadCrumb = (key, option) => {
-        breadcrumbs.push(
-            <Link underline="hover" key={key} color="inherit" sx={{ cursor: 'pointer' }} onClick={() => { setSection(null) }} >
-                {option}
-            </Link>
-        )
-    }
 
     return (
         <ThemeProvider theme={theme}>
