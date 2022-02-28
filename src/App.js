@@ -1,14 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Administrators from './Pages/Administrators'
+import Home from './Pages/Home'
 
 export default function App() {
   return (
     <Router>
       <Routes>
-          <Route path="/" element={<Administrators/>} />
-          <Route path="*" element={<p>NOT FOUND</p>} />
+          <Route path="/" element={<Home/>} />
       </Routes>
     </Router>
   );
